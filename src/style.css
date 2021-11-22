@@ -17,3 +17,17 @@ ul {
 li {
   list-style: none;
 }
+
+.weather-temperature strong {
+  font-size: 64px;
+  line-height: 1;
+  font-weight: normal;
+}
+.temperature-units {
+  position: relative;
+  top: -35px;
+}
+
+.weather-temperature img {
+  padding: 0 0 35px 0;
+}
