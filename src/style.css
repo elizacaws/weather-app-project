@@ -31,3 +31,7 @@ li {
 .weather-temperature img {
   padding: 0 0 35px 0;
 }
+
+#conditions {
+  text-transform: capitalize;
+}
