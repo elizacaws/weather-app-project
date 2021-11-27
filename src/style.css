@@ -32,6 +32,6 @@ li {
   padding: 0 0 35px 0;
 }
 
-#conditions {
+#conditions:first-letter {
   text-transform: capitalize;
 }
