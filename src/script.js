@@ -29,6 +29,7 @@ function displayTemperature(response) {
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
+  let iconElement = document.querySelector("#icon");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   conditionsElement.innerHTML = response.data.weather[0].description;
@@ -36,9 +37,14 @@ function displayTemperature(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed);
   console.log(response.data);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 let apiKey = "6df09177bf10bb0a2b5eb9a9dc845bfd";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Long Beach&appid=${apiKey}&units=metric`;
+let city = "Sydney";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayTemperature);
