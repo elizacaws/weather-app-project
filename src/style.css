@@ -35,3 +35,7 @@ li {
 #conditions:first-letter {
   text-transform: capitalize;
 }
+
+#search-form {
+  padding: 0 0 15px 0;
+}
