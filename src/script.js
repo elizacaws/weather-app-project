@@ -65,11 +65,15 @@ function displayFahrenheit(event) {
   event.preventDefault();
   let fahrenheitTemp = Math.round((celsiusTemperature * 9) / 5 + 32);
   let temperatureElement = document.querySelector("#temperature");
+  celsiusElement.classList.remove("active");
+  fahrenheitElement.classList.add("active");
   temperatureElement.innerHTML = fahrenheitTemp;
 }
 
 function displayCelsius(event) {
   event.preventDefault();
+  celsiusElement.classList.add("active");
+  fahrenheitElement.classList.remove("active");
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = celsiusTemperature;
 }

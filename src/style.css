@@ -39,3 +39,13 @@ li {
 #search-form {
   padding: 0 0 15px 0;
 }
+
+.weather-temperature .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
