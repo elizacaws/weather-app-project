@@ -30,7 +30,7 @@ function displayTemperature(response) {
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
-  celsiusTemperature = response.data.main.temp;
+  celsiusTemperature = Math.round(response.data.main.temp);
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
   cityElement.innerHTML = response.data.name;
   conditionsElement.innerHTML = response.data.weather[0].description;
@@ -68,7 +68,16 @@ function displayFahrenheit(event) {
   temperatureElement.innerHTML = fahrenheitTemp;
 }
 
+function displayCelsius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = celsiusTemperature;
+}
+
 let fahrenheitElement = document.querySelector("#fahrenheit");
 fahrenheitElement.addEventListener("click", displayFahrenheit);
+
+let celsiusElement = document.querySelector("#celsius");
+celsiusElement.addEventListener("click", displayCelsius);
 
 search("Los Angeles");
