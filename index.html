@@ -17,9 +17,9 @@
   <body>
     <div class="container">
       <div class="weather-app">
-        <div class="row">
-          <form id="search-form">
-            <div class="col-6">
+        <form id="search-form">
+          <div class="row">
+            <div class="col-9">
               <input
                 type="search"
                 placeholder="Enter a city"
@@ -27,11 +27,11 @@
                 id="city-input"
               />
             </div>
-            <div class="col-4">
+            <div class="col-3">
               <input type="submit" value="Search" class="btn btn-primary" />
             </div>
-          </form>
-        </div>
+          </div>
+        </form>
         <h1 id="city"></h1>
         <ul>
           <li id="date"></li>
@@ -42,7 +42,9 @@
             <div class="clearfix weather-temperature">
               <img src="" alt="Cloudy" id="icon" width="105px" />
               <strong id="temperature"></strong
-              ><span class="temperature-units">°C | <a href="#">°F</a></span>
+              ><span class="temperature-units"
+                >°C | <a href="#" id="fahrenheit">°F</a></span
+              >
             </div>
           </div>
           <div class="col-6">
