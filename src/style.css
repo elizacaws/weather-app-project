@@ -49,3 +49,21 @@ li {
 .weather-temperature .active:hover {
   text-decoration: none;
 }
+
+.weather-forecast {
+  padding: 0 0 10px 20px;
+  text-align: center;
+}
+
+.weather-forecast-date {
+  color: lightsalmon;
+}
+
+.weather-forecast-max {
+  color: salmon;
+}
+
+.weather-forecast-min {
+  color: salmon;
+  opacity: 0.85;
+}
