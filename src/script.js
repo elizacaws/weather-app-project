@@ -21,6 +21,30 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+        <div class="col-2">
+          <div class="weather-forecast-date">${day}</div>
+          <img src="http://openweathermap.org/img/wn/50n@2x.png" width="45px" />
+          <div class="weather-forecast-temperature">
+            <span class="weather-forecast-max">22°</span>
+            <span class="weather-forecast-min">15°</span>
+          </div>
+        </div>
+    `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 //Display city, temp, and conditions
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
@@ -85,3 +109,4 @@ let celsiusElement = document.querySelector("#celsius");
 celsiusElement.addEventListener("click", displayCelsius);
 
 search("Los Angeles");
+displayForecast();
